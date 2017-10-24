@@ -24,7 +24,7 @@ Starting point of program. Collects lists of images to use when generating a spr
 
 Sprite class which contains methods for drawing, updating and saving the sprite image.
 
-##TODO
+## TODO
 
 * Finish docstring commenting
 * Add explanation in readme.txt explaining how to use and the reason why a gui is not provided
