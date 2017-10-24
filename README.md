@@ -1,5 +1,5 @@
 # comp120-tinkering-graphics
-Python Code for Re-purposing Graphics Algorithms
+Python Code for Re-purposing Graphics Algorithms - Github link: https://github.com/TMGilchrist/comp120-tinkering-graphics
 
 ### Important: If downloading from github, assets.7z must be uncompressed before the program can run!
 ### Important: path_to_assets in main.py must point to the assets folder at runtime. By default, this points to the parent of the Scripts Folder.
