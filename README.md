@@ -3,7 +3,7 @@ Python Code for Re-purposing Graphics Algorithms
 
 ### Important: If downloading from github, assets.7z must be uncompressed before the program can run!
 ### Important: path_to_assets in main.py must point to the assets folder at runtime. By default, this points to the folder above the Scripts Folder.
-			   When running on a new computer, please ensure the file structure is maintained or this variable is set corretly to avoid errors.
+### When running on a new computer, please ensure the file structure is maintained or this variable is set corretly to avoid errors.
 
 ## Overview
 
@@ -41,11 +41,3 @@ GetImages class which contains several functions to easily load a large number o
 ### Sprite.py
 
 Sprite class which contains methods for drawing, updating and saving the sprite image.
-
-## TODO
-
-* Finish docstring commenting
-* Add explanation in readme.txt explaining how to use and the reason why a gui is not provided
-* Combine readme.txt and readme.md!
-* Merge with master
-* Upload to learning space as zip file
