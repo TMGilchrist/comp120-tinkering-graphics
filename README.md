@@ -23,3 +23,10 @@ Starting point of program. Collects lists of images to use when generating a spr
 ### Sprite.py
 
 Sprite class which contains methods for drawing, updating and saving the sprite image.
+
+##TODO
+
+* Finish docstring commenting
+* Add explanation in readme.txt explaining how to use and the reason why a gui is not provided
+* Merge with master
+* Upload to learning space as zip file
