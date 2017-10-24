@@ -7,12 +7,22 @@ Python Code for Re-purposing Graphics Algorithms
 
 ## Overview
 
-When provided with appropriate images, this python program will generate and save a sprite using randomly selected images from several catagories,
-incuding: head, body, legs and feet. 
+This is a utility program designed to be used in a game that implements random unit generation. When provided with appropriate images, the program will generate
+and save a sprite using randomly selected images from several catagories, incuding: head, body, legs and feet. The program can be easily expanded to accomodate additional
+catagories such as weapons, with minimal changes to the code. The images used to create the random sprites could also be easily seperated into more precise catagories,
+for example, long and short hair, to allow for more control over the sprites generated.
 
 For this project, images have been provided in the assets folder. If different images are used, ensure the sprite_file_type has been set correctly in main.py.
 
-Newly created sprites are saved in Assets/Sprites/CustomSprites
+Newly created sprites are saved in Assets/Sprites/CustomSprites with default names of sprite0, sprite1 etc. A text file will be created in the scripts folder to record the
+names in use. To reset the autonaming to 0, delete the spriteNames.txt file.
+
+To run the program, simply run main.py. The new image will appear in the save location and the program will exit.
+
+### Please Note:
+
+As a utility tool designed to be run during the generation of a game world, or used as a tool for developers to quickly make custom sprites, no gui is provided.
+Instead, the new sprites are saved directly to file where they can be used in the game.
 
 ## Dependencies
 
@@ -22,7 +32,11 @@ The pygame, glob and random libraries must be available for the program to impor
 
 ### main.py
 
-Starting point of program. Collects lists of images to use when generating a sprite and instantiates an instance of the Sprite class.
+Starting point of program. Contains the file path and file type of the images to be used. Instantiates GetImages and Sprite classes.
+
+### get_images.py
+
+GetImages class which contains several functions to easily load a large number of images into seperate lists for later use.
 
 ### Sprite.py
 
