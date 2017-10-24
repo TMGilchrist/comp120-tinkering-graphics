@@ -28,5 +28,6 @@ Sprite class which contains methods for drawing, updating and saving the sprite 
 
 * Finish docstring commenting
 * Add explanation in readme.txt explaining how to use and the reason why a gui is not provided
+* Combine readme.txt and readme.md!
 * Merge with master
 * Upload to learning space as zip file
