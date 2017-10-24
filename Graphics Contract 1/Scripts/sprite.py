@@ -3,7 +3,12 @@ import pygame
 
 class Sprite:
 
-    """Sprite Class"""
+    """
+    Sprite Class. This class contains methods for drawing, updating and saving a sprite as a single image.
+
+    Attributes:
+        image (pygame.Surface): This is the image for the sprite in the form of a surface which can be redrawn if the sprite is updated.    
+    """
 
     # The image used for the sprite
     image = 0
@@ -20,7 +25,9 @@ class Sprite:
             body (image): The image to use for the sprite's body.
             head (image): The image to use for the sprite's head.
             feet (image): The image to use for the sprite's feet.
-            weapon (image): The image to use for the sprite's weapon.
+            weapon (image): The image to use for the sprite's weapon. Note that in the current implementation this
+                            is always passed a placeholder of 0, as weapon sprites have not been added to the assets folder.
+                            Similarily, the weapon image is not blitted to the sprite image in the draw functions, as there is not image.
         """
 
         self.size = size
@@ -58,7 +65,6 @@ class Sprite:
             body_pos (tuple): Position of the body image.
             legs_pos (tuple): Position of the legs image.
             head_pos (tuple): Position of the head image.
-
         """
 
         self.sprite_base.blit(self.base, base_pos)
@@ -73,12 +79,11 @@ class Sprite:
     def update(self, to_update, new_values):
 
         """
-        Updates the sprite image.
+        Updates the sprite image. Can be called with multiple values to change at once.
 
         Args:
             to_update (list of strings): The components to change, referencing the sprite properties.
             new_values (list of images): The new images for the components being changed .
-
         """
 
         for i in range (0, len(to_update)):
@@ -89,13 +94,13 @@ class Sprite:
     def save_with_id(self, save_path, file_type):
 
         """
-        Saves the sprite image to file with a unique name and
-        records the name used in a text document.
+        Saves the sprite image to file with a unique name and records the name used in a text document.
+        Whenever a sprite is saved the text document is checked to ensure that the same name is not used twice.
+        If the document does not exist, one will be created.
 
         Args:
               save_path (string): The file path in which to save the image.
               file_type (string): The file extension to use when saving the image.
-
         """
 
         sprite_id = 0
