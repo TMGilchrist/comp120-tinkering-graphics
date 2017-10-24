@@ -2,7 +2,7 @@
 Python Code for Re-purposing Graphics Algorithms
 
 ### Important: assets.7z must be uncompressed before the program can run!
-### Important: path_to_assets in main.py must point to the assets folder at runtime. When running on a new computer, please ensure this is set corretly to avoid errors.
+### Important: path_to_assets in main.py must point to the assets folder at runtime. By default, this points to the folder above the Scripts Folder. When running on a new computer, please ensure the file structure is maintained or this variable is set corretly to avoid errors.
 
 ## Overview
 
