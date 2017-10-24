@@ -3,6 +3,8 @@ import pygame
 
 class Sprite:
 
+    """Sprite Class"""
+
     # The image used for the sprite
     image = 0
 
@@ -29,21 +31,21 @@ class Sprite:
         self.feet = feet
         self.weapon = weapon
 
+        self.sprite_base = pygame.Surface(self.size, pygame.SRCALPHA, 32)
+        self.sprite_base.set_alpha(255)
+
     def draw(self):
 
         """Draws the sprite's component images onto a PyGame surface and assigns it to the image property."""
 
-        sprite_base = pygame.Surface(self.size, pygame.SRCALPHA, 32)
-        sprite_base.set_alpha(255)
-
-        sprite_base.blit(self.base, (0, 0))
-        sprite_base.blit(self.legs, (0, 0))
-        sprite_base.blit(self.body, (0, 0))
-        sprite_base.blit(self.head, (0, 0))
-        sprite_base.blit(self.feet, (0, 0))
+        self.sprite_base.blit(self.base, (0, 0))
+        self.sprite_base.blit(self.legs, (0, 0))
+        self.sprite_base.blit(self.body, (0, 0))
+        self.sprite_base.blit(self.head, (0, 0))
+        self.sprite_base.blit(self.feet, (0, 0))
 
         # Save sprite
-        self.image = sprite_base
+        self.image = self.sprite_base
 
     def draw_with_position(self, base_pos, body_pos, legs_pos, head_pos):
 
@@ -59,17 +61,14 @@ class Sprite:
 
         """
 
-        sprite_base = pygame.Surface(self.size, pygame.SRCALPHA, 32)
-        sprite_base.set_alpha(255)
-
-        sprite_base.blit(self.base, base_pos)
-        sprite_base.blit(self.legs, legs_pos)
-        sprite_base.blit(self.body, body_pos)
-        sprite_base.blit(self.head, head_pos)
-        sprite_base.blit(self.feet, (0, 0))
+        self.sprite_base.blit(self.base, base_pos)
+        self.sprite_base.blit(self.legs, legs_pos)
+        self.sprite_base.blit(self.body, body_pos)
+        self.sprite_base.blit(self.head, head_pos)
+        self.sprite_base.blit(self.feet, (0, 0))
 
         # Save sprite
-        self.image = sprite_base
+        self.image = self.sprite_base
 
     def update(self, to_update, new_values):
 

@@ -9,13 +9,13 @@ body = []
 head = []
 feet = []
 
-# Specify file type to load and the image directories
+# Specify file type to load and the path to the assets folder
 sprite_file_type = ".png"
 
-path_to_assets = "D:/Uni/Programming/Comp120/Graphics Contract 1/Assets"
-# pathToAssets = "//tremictssan.fal.ac.uk\userdata\TG190896\My Documents\Py2.7\HereBeDragons\Assets"
+path_to_assets = "../Assets"
 
 
+# Get the paths for each component type
 # Might be better to use os.join for filepath
 base_path = glob.glob(path_to_assets + "/Sprites/base/*" + sprite_file_type)
 legs_path = glob.glob(path_to_assets + "/Sprites/legs/*" + sprite_file_type)
